@@ -66,7 +66,8 @@ source ~/.bashrc
 
 **注意**如果安装了其他解释器，如zsh
 
-上面*sh均更改为对应的解释器
+上面*sh均更改为对应的解释器  
+
 bash改为zsh    bashrc改为zshrc
 
 **zsh**
@@ -75,3 +76,43 @@ echo "source /opt/ros/noetic/setup.zsh" >> ~/.bashrc
 source ~/.zshrc
 ```
 
+## Create ROS Workspace
+
+```
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin_make
+```
+
+catkin_make之后,生成了build 和 devel
+then, source这些文件中的任何一个都可以将当前工作空间设置在环境的最顶层。
+
+```
+source devel/setup.zsh
+```
+
+要保证工作区被安装脚本正确覆盖，需确定ROS_PACKAGE_PATH环境变量包含你当前的工作空间目录：
+```
+echo $ROS_PACKAGE_PATH
+
+the result will be like:
+/home/<username>/catkin_ws/src:/opt/ros/<distro>/share
+```
+
+## Filesystem Tools
+
+Navigating with command-line tools such as ls and cd can be very tedious which is why ROS provides tools to help you. 
+
+### rospack
+
+usage and example:
+```
+rospack find [pkg_name]
+
+example:
+rospack find roscpp
+would return
+YOUR_INSTALL_PATH/share/roscpp
+```
+
+### roscd
