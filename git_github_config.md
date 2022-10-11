@@ -78,8 +78,14 @@ ssh-keygen -t rsa -C "YOUR_EMAIL"
 此时输出的内容会显示公钥的保存目录，默认是/home/用户名/.ssh/id_rsa.pub
 
 打开github.com -> Settings -> SSH and GPG keys -> New SSH key
+
+
 title：随便取
+
+
 Keytype：默认
+
+
 Key：将ssh对应目录下**id_rsa.pub**中内容粘贴进去
 最后，**Add SSH key**
 
