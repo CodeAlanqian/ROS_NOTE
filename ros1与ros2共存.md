@@ -1,5 +1,9 @@
 # ros1与ros2共存
 
+问题解决方案来源：
+
+[Autocomplete fails while using zsh](https://github.com/ros2/ros2cli/issues/534)
+
 * 系统环境20.04
 * ros1版本 ros-noetic
 * ros2版本 ros-galactic
@@ -51,8 +55,6 @@ else
   source /opt/ros/galactic/setup.zsh
 fi
 ```
-
-
 
 实现效果：
 
