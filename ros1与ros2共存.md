@@ -10,6 +10,7 @@
 
 为了省事，我们习惯将source写到.bashrc文件(若是不同的解释器如zsh，则为.zshrc文件)
 
+
 ```bash
 sudo gedit ~/.bashrc
 ```
