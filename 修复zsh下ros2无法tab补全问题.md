@@ -1,9 +1,12 @@
 #zsh中ros2 tab自动补全
+
+解决方法来源：
+
+[Autocomplete fails while using zsh](https://github.com/ros2/ros2cli/issues/534)
 环境：
 
 * Ubuntu20.04
 * ros-galactic
-
 
 以galactic为例
 
